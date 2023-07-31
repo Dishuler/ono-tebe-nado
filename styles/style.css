@@ -1,1 +1,541 @@
 /* место для вашего кода */
+html,
+body {
+  height: 100%;
+  margin: auto;
+  color: #000;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper > main {
+  flex: 1 1 auto;
+}
+
+[class*="__container"] {
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+/*Модули--------------------------*/
+
+._active {
+  text-decoration: none;
+}
+
+/* .titles-cover {
+} */
+
+.title-two {
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/*Навигация-----------------------*/
+
+/* .menu__list {
+} */
+
+.menu__list-item {
+  font-size: 18px;
+  line-height: normal;
+}
+
+.menu__list-item-link {
+  position: relative;
+
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+.menu__list-item-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -1px;
+  left: 0;
+  background-color: #000;
+  transition: background-color 0.3s ease;
+}
+
+.menu__list-item-link:hover::after {
+  content: "";
+  background-color: #ae9d00;
+}
+
+.menu__list-item:first-child > .menu__list-item-link::after {
+  display: none;
+}
+
+.menu__list-item-link:hover {
+  color: #ae9d00;
+  text-decoration: none;
+}
+
+/*Навигация-----------------------*/
+
+/*Контакты-----------------------*/
+
+.contact-list {
+  list-style: none;
+
+  font-size: 18px;
+  line-height: 135%; /* 24.3/18 */
+}
+
+.contact-list__item {
+  margin-left: auto;
+  max-width: 240px;
+  white-space: wrap;
+}
+
+.contact-list__item-link {
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-list__item-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -1px;
+  left: 0;
+  background-color: #000;
+  transition: background-color 0.3s ease;
+}
+
+.contact-list__item-link:hover::after {
+  content: "";
+  background-color: #ae9d00;
+}
+
+.contact-list__item:last-child > .contact-list__item-link::after {
+  display: none;
+}
+
+.contact-list__item-link:hover {
+  color: #ae9d00;
+}
+
+.zero__spacing {
+  letter-spacing: normal;
+}
+
+/*Контакты-----------------------*/
+/*Стили заголовка-----------------------*/
+
+.titles-cover__whide {
+  letter-spacing: 60px;
+}
+
+._left {
+  line-height: 115%;
+}
+
+._center {
+  text-align: center;
+}
+
+._right {
+  text-align: right;
+}
+
+/*Стили заголовка-----------------------*/
+/*Модули--------------------------*/
+
+/*header--------------------------*/
+
+.header {
+  padding-top: 92px;
+  padding-bottom: 95px;
+}
+
+/* .header__container {
+} */
+
+.header__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__menu {
+  flex: 1 0;
+}
+
+.header__menu__list {
+  display: flex;
+  max-width: 389px;
+
+  list-style: circle;
+}
+
+.header__menu__list > :not(:last-child) {
+  margin-right: 33px;
+}
+
+.header__menu__list > :first-child {
+  list-style: none;
+}
+
+.header__image {
+	display: block;
+  flex: 1 0;
+  max-width: 138px;
+  max-height: 108px;
+}
+
+.header__image img {
+  display: block;
+  width: 100%;
+}
+
+.header__contact-list {
+  flex: 1 0;
+}
+
+/*header--------------------------*/
+
+/*cover--------------------------*/
+
+.page__cover {
+  position: relative;
+
+  padding-top: 165px;
+  padding-bottom: 50px;
+
+  color: #fff;
+
+  background: url(../images/cover.jpg) left / cover no-repeat;
+}
+
+.page__cover::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.6;
+}
+
+.cover__container {
+  position: relative;
+  z-index: 1;
+}
+
+/* .cover__body {
+} */
+
+.cover__body > :not(:last-child) {
+  margin-bottom: 135px;
+}
+
+.cover__titles {
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 100%; /* 115px */
+  letter-spacing: 30px;
+  text-transform: uppercase;
+}
+
+.cover__titles > :not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.cover__titles > span {
+  display: block;
+}
+
+._right span {
+  text-align: end;
+}
+
+.cover__bet {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.cover__bet > :not(:last-child) {
+  margin-right: 78px;
+}
+
+.cover__bet-text {
+  white-space: pre-wrap;
+  line-height: 127.272727%; /* 28/22 */
+}
+
+.cover__bet-link {
+  padding: 12px 32px;
+  border: solid 1px #fff;
+  text-decoration: none;
+  line-height: normal;
+  transition: all 0.3s ease;
+}
+
+.cover__bet-link:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/*cover--------------------------*/
+
+/*lots--------------------------*/
+
+.page__lots {
+  padding-top: 181px;
+  padding-bottom: 90px;
+}
+
+/* .lots__container {
+}
+.lots__body {
+} */
+
+.lots__title {
+  margin-left: 40px;
+  margin-bottom: 26px;
+}
+
+.lots__cards-list {
+  margin-bottom: 30px;
+  list-style: none;
+}
+
+.cards-list {
+  display: flex;
+}
+
+.cards-list > :not(:last-child) {
+  margin-right: 25px;
+}
+
+.cards-list li {
+  display: flex;
+}
+
+.cards-list__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 430px;
+  padding: 50px 40px;
+
+  color: #fff;
+  line-height: 120%; /* 24px */
+}
+
+.cards-list__card-title {
+  margin-bottom: 31px;
+
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 120%; /* 26.4px */
+  text-decoration-line: underline;
+  text-transform: uppercase;
+}
+
+.cards-list__card-text {
+  flex: 0 1;
+}
+
+.card_one {
+  position: relative;
+  background: url(../images/card-lot-01.jpg) center / cover no-repeat;
+  z-index: -2;
+}
+.card_one::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.card_two {
+  position: relative;
+  background: url(../images/card-lot-02.jpg) center / cover no-repeat;
+  z-index: -2;
+}
+.card_two::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.card_three {
+  position: relative;
+  background: url(../images/card-lot-03.jpg) center / cover no-repeat;
+  z-index: -2;
+}
+.card_three::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.lots__link {
+  position: relative;
+  margin-left: 40px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.lots__link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -1.5px;
+  left: 0;
+  background-color: #000;
+  transition: background-color 0.3s ease;
+}
+.lots__link:hover::after {
+  content: "";
+  background-color: #ae9d00;
+}
+.lots__link:hover {
+  color: #ae9d00;
+}
+
+/*lots--------------------------*/
+
+/*about--------------------------*/
+
+.page__about {
+  padding-top: 91.5px;
+  padding-bottom: 90px;
+}
+
+/* .about__container {
+} */
+
+.about__body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about__image {
+  max-width: 240px;
+  margin: 0 95px;
+  padding: 63px 46px;
+
+  background-color: #000;
+  border-radius: 50%;
+
+  align-self: start;
+  flex: 1 0 auto;
+}
+
+.about__image img {
+  display: block;
+  width: 100%;
+}
+
+.about__content {
+  margin-left: 25px;
+}
+
+.about__title {
+  margin-top: 101.5px;
+  margin-bottom: 100px;
+}
+
+.about__text {
+  line-height: 115%;
+}
+
+.about__text > :not(:last-child) {
+  margin-bottom: 29px;
+}
+
+/*about--------------------------*/
+
+/*footer--------------------------*/
+
+.footer {
+  padding-top: 93.5px;
+  padding-bottom: 90px;
+}
+
+/* .footer__container {
+} */
+
+.footer__body {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .footer__contact-list {
+} */
+
+.footer__menu {
+  text-align: center;
+}
+
+.footer__menu__list {
+  list-style: none;
+}
+
+.footer__social-list {
+  display: flex;
+  list-style: none;
+}
+
+.footer__social-list > :not(:last-child) {
+  margin-right: 48px;
+}
+
+/* .social-list {
+} */
+
+.social-list__item {
+  max-width: 48px;
+  max-height: 48px;
+}
+
+/* .social-list__item-link {
+} */
+
+.social-list__item-link img {
+  display: block;
+  width: 100%;
+}
+
+/*footer--------------------------*/
