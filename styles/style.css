@@ -131,8 +131,8 @@
   letter-spacing: 0.6em;
 }
 
-.titles-item__span_left {
-}
+/* .titles-item__span_left {
+} */
 
 .titles-item__span_center {
   text-align: center;
@@ -268,7 +268,7 @@
   gap: 23.3px;
   line-height: 127.272727%;
 }
-.cover__bet-text span{
+.cover__bet-text span {
   display: block;
 }
 
