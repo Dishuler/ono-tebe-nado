@@ -254,8 +254,6 @@
   display: flex;
   gap: 23.3px;
   line-height: 127.272727%;
-}
-.cover__bet-text {
   word-spacing: 0.8em;
 }
 
@@ -478,8 +476,8 @@
   background-color: #ffeb3c;
 }
 
-.social-list__item-link {
-}
+/* .social-list__item-link {
+} */
 
 .social-list__item-link img {
   display: block;
